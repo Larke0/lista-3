@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+int main(void) {
+  int q=1;
+  int x, y, u, isPrime, Numero, Primeiro;
+  while(1){
+    x=2, Primeiro=1;
+  printf("Digite o numero para a decomposição:  ");
+  scanf("%d", &y);
+  Numero=y;
+    for(;x<=Numero;x=x+1)
+    {
+      for(;y%x==0;)
+      {
+      isPrime=1;
+      for(u=2; u!=x;u=u+1)
+      {
+      if(x%u==0)
+      {
+        isPrime=0;
+        printf("");
+      }
+      }
+      if(isPrime==1){
+        if(Primeiro==1){
+             printf("%d", x);
+             Primeiro=0;
+        }
+        else{
+          printf("*%d", x);
+        }
+          }
+        y=y/x;
+        }
+      }
+  printf("=%d\n\n", Numero);
+}
+  return 0;
+}
