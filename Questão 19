@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int randentre(int a, int b){
+return a+rand()%(b-a+1);
+}
+
+
+int main(void) {
+  printf("%d\n", randentre(10, 50));
+  return 0;
+}
