@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <string.h>
+
+int main(void) {
+  char nome[100];
+  int a[26]={0};
+  int letras[26];
+  int i;
+  for(i=0;i<26;i++){
+    letras[i]=65+i;
+  }
+  printf("Digite o texto:  ");
+  fgets(nome, 100, stdin);
+  for(i=0;i<(strlen(nome));i++){
+    if((nome[i]>=65)&&(nome[i]<=90)){
+      a[nome[i]-65]++;
+    }else if((nome[i]>=97)&&(nome[i]<=122)){
+      a[nome[i]-97]++;
+    }
+  }
+  for(i=0;i<26;i++){
+    printf("%c - %d\n", letras[i], a[i]);
+  }
+  return 0;
+}
