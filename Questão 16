@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main(void) {
+  char nome[100], nomein[100];
+  int i, backspace;
+  fgets(nome, 100, stdin);
+  for(i=0;i<100;i++){
+    if(nome[i]==10){
+      backspace=i;
+    }
+  }
+  nomein[backspace]=10;
+  printf("\n");
+  for(i=0;i<backspace;i++){
+    nomein[backspace-i-1]=nome[i];
+  }
+  printf("Invertido:\n");
+  puts(nomein);
+  return 0;
+}
