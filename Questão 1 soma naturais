@@ -1,0 +1,10 @@
+#include <stdio.h>
+
+int main(void) {
+  int x, n;
+  for(n=1;n<=100;n++){
+    x+=n;
+  }
+  printf("A soma dos %d primeiros naturais é %d\n",n-1,x);
+  return 0;
+}
