@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+
+
+int main(void) {
+  int n, nx=50, x1, x2, xholder;
+  scanf("%d", &nx);
+  printf("1-  0\n2-  1\n");
+  for(n=0, x1=0, x2=1;n<=(nx-3);n++){
+    printf("%d- ",n+3);
+    xholder=x1+x2;
+    x1=x2;
+    x2=xholder;
+    printf(" %d \n", x2);
+  }
+  return 0;
+}
