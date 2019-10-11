@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <string.h>
+
+void reverse(char *nome, int n) {
+  char nomein[n];
+  int i, backspace;
+  backspace=strlen(nome);
+  nomein[backspace]=10;
+  printf("\n");
+  for(i=0;i<backspace;i++){
+    nomein[backspace-i-1]=nome[i];
+  }
+  for(i=0;i<backspace;i++){
+    nome[i]=nomein[i];
+  }
+}
+
+int main(void) {
+  char nome[100]="Contrario";
+  reverse(nome, 100);
+  puts(nome);
+  return 0;
+}
