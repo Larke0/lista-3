@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main(void) {
+  int x=0, n, IsPrime=1;
+  printf("Digite o numero:  ");
+  scanf("%d", &x);
+  if(x==0){IsPrime=0;}
+  for(n=2;n<x;n++){
+    if(x%n==0){
+      IsPrime=0;
+    }
+  }
+  if(IsPrime==1){printf("É primo\n");}
+  else{printf("Não é primo\n");}
+  return 0;
+}
