@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main(void) {
+  int n, x=0, np=0;
+  for(n=13;n<73;n++){
+    if(n%2==0){
+      x=x+n;
+      np++;
+    }
+  }
+  printf("\n\n%d\n", x/np);
+  return 0;
+}
