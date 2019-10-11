@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main(void) {
+  int x, numero=6, n, y;
+  scanf("%d",&numero);
+  printf("\n\n");
+  for(n=1;n<=numero;n++){
+    y=numero%n;
+    if(y==0){
+      printf("%d\n",n);
+    }
+  }
+  return 0;
+}
