@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main(void) {
+  char nome[100];
+  int backspace, i, j, k, characteres, space, palavras;
+  fgets(nome, 100, stdin);
+  for(i=0, backspace=-1;i<=100;i++){
+    if(nome[i]==10){backspace=i;break;}
+  }
+  if(backspace==-1){
+    backspace=100;
+  }
+  for(i=0, characteres=0;i<backspace;i++){
+    if(nome[i]>32){characteres++;}
+  }
+  for(i=1, palavras=0, space=1; i<backspace;i++){
+    if(
+      (((nome[i-1]>=65)&&(nome[i-1]<=90))&&
+      (nome[i]==32))||
+      (((nome[i-1]>=97)&&(nome[i-1]<=122))&&
+      (nome[i]==32))
+    ){palavras++;}
+    if(
+      (((nome[i+1]>=65)&&(nome[i+1]<=90))&&
+      (nome[i]==32))||
+      (((nome[i+1]>=97)&&(nome[i+1]<=122))&&
+      (nome[i]==32))
+    ){palavras++;}
+  }
+  palavras=(palavras/2)+1;
+  printf("%d palavras e %d caracteres", palavras, characteres);
+  return 0;
+}
