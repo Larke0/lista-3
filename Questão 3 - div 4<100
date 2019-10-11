@@ -1,0 +1,9 @@
+#include <stdio.h>
+
+int main(void) {
+  int x, n;
+  for(n=1;n*4<100;n++){
+    printf("%d\n", n*4);
+  }
+  return 0;
+}
