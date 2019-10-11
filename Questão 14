@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main(void) {
+  int a[20];
+  int n, na;
+  for(n=1000, na=0;n<=1999&&na<=20;n++){
+    if(n%11==5){
+      a[na]=n;
+      na++;
+    }
+  }
+  for(n=0;n<=20;n++){
+    printf("%d resto com 11 = %d\n", a[n], a[n]%11);
+  }
+  printf("Hello World\n");
+  return 0;
+}
