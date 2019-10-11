@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <math.h>
+
+int main(void) {
+  int L=16, n;
+  printf("Insira um numero para descobrir o quadrado maior que ele:  ");
+  scanf("%d", &L);
+  for(n=1;(pow(n,2)<=L);n++){
+  }
+  printf("\n%d² = %0.0f > %d\n", n+1, pow(n+1,2),L);
+  return 0;
+}
