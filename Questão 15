@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main(void) {
+  char nome[100];
+  int a, n;
+  fgets(nome, 100, stdin);
+  for(n=0, a=0;n<=99;n++){
+    if(nome[n]==97){
+      a++;
+    }
+  }
+  printf("A palavra tem %d a\n", a);
+  return 0;
+}
