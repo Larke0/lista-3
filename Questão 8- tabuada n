@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+int main(void) {
+  int x=0, n;
+  printf("insira um numero para taubada:  ");
+  scanf("%d", &x);
+  for(n=1;n<=10;n++){
+    printf("%d*%d=%d\n", x, n, x*n);
+  }
+  return 0;
+}
