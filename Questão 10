@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int exibir(int x[], int nn){
+  int n;
+  for(n=0;n<=(nn-1);n++){
+    if(x[n]>=10&&x[n]<=50){
+      printf("%d ", x[n]);
+    }
+  }
+  return 0;
+}
+
+int main(void) {
+  int a[10]={0},n;
+  printf("Insira 10 numeros:  ");
+  for(n=0;n<=9;n++){
+    scanf("%d", &a[n]);
+  }
+  exibir(a, 10);
+  return 0;
+}
